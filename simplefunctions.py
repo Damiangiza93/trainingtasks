@@ -30,5 +30,27 @@ def count_upandlowletters(str1):            # liczy duże małe literyw stringu
             low_letters += 1
     return f'{low_letters} lower case letters \n{upp_letters} upper case letters'
 
+def unique_elements_list(list1):            # zwraca tylko unikalne rekordy z listy
+    list2 = []
+    for i in list1:
+        if i not in list2:
+            list2.append(i)
+    return list2    
 
-print(count_upandlowletters('Dam ianGizA '))
+def is_prime(number):
+    prime = ''
+    if number==1:
+        return 'Number is not prime'
+    else:
+        for i in range(2, number):
+            if (number/i) == (number//i):
+                prime = 'Number is not prime'
+        if prime == '':
+            prime = 'Number is prime'
+        return prime
+        
+
+     
+
+print(is_prime(1))
+# print(count_upandlowletters('Dam ianGizA '))
