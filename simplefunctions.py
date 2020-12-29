@@ -79,19 +79,27 @@ def ispalindrome(string):
     return True
 
 def pascal_triangle(rows):
-    print('1')
-    print('1 1')
+    print([1])
+    print([1,1])
     list1 = [1,1]
-    for i in range(2,rows):
+
+    while rows > len(list1):
         list2 = []
         for n in range(0, (len(list1)-1)):
             list2.append(list1[n]+list1[n+1])
-            list1.insert(n+1, list2[n])
+        list1 = [1,1]
+        for i in range(len(list2)):
+            list1.insert(i+1, list2[i])
         print(list1)
-
-
+    return ''
         
-print(pascal_triangle(4))
+def hypen_alphabetic(string):
+    list = sorted(string.split('-'))
+    return print('-'.join(list))
+
+
+print(hypen_alphabetic('green-red-black-orange-pink'))
+#print(pascal_triangle(2))
 #print(ispalindrome('nursesrun'))
 
 # print(perfect_num(496))
