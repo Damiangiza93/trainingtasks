@@ -66,7 +66,6 @@ def isperfect_num(num):                       # sprawdza czy perfect number - nu
     else:
         print('Number is not perfect')
 
-
 def ispalindrome(string):
     left = 0
     right = len(string) - 1
