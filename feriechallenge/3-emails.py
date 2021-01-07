@@ -12,6 +12,7 @@ Propozycje rozszerzenia: dodaj opcję wysyłania maili z treścią w HTML oraz w
 '''
 import smtplib
 import imghdr
+import os
 from openpyxl import load_workbook
 from email.message import EmailMessage
 from time import sleep
