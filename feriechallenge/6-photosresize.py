@@ -8,7 +8,7 @@ i porównaj obie wartości - bezwzględnie i w %)
 from PIL import Image
 import os
 
-#paths - folder ze zdjeciami | extension - jakie rozszerzenie ma brać pod uwagę | nazwa folderu w którym zapisze nowe zdjęcia
+# paths - folder ze zdjeciami | extension - jakie rozszerzenie ma brać pod uwagę | nazwa folderu w którym zapisze nowe zdjęcia
 paths = 'D:/Zdjecia/ja'
 os.chdir(paths)
 extension = '.JPG'
