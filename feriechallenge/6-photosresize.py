@@ -9,7 +9,7 @@ from PIL import Image
 import os
 
 #paths - folder ze zdjeciami | extension - jakie rozszerzenie ma brać pod uwagę | nazwa folderu w którym zapisze nowe zdjęcia
-paths = 'D:/Zdjecia/ja/'
+paths = 'D:/Zdjecia/ja'
 os.chdir(paths)
 extension = '.JPG'
 sfolder = 'smaller'
@@ -23,21 +23,18 @@ for f in os.listdir('.'):
             size.append(int(s//2))            
         im.thumbnail(size)                              
         if size[1] < size[0]:                           
-            im.transpose(Image.ROTATE_90).save(f'{paths}{sfolder}/{name}half{fext}')
+            im.transpose(Image.ROTATE_90).save(f'{paths}/{sfolder}/{name}half{fext}')
         else:
-            im.save(f'{paths}{sfolder}/{name}half{fext}')
+            im.save(f'{paths}/{sfolder}/{name}half{fext}')
 
-s1 = 0
-for f in os.listdir(paths):
-    if f.endswith(extension):
-        s1 += os.path.getsize(f'{paths}{f}')
-s2 = 0
-for f in os.listdir(f'{paths}{sfolder}'):
-    if f.endswith(extension):
-        s2 += os.path.getsize(f'{paths}{sfolder}/{f}')
+def sizeofdata(path):
+    s1 = 0
+    for f in os.listdir(path):
+        if f.endswith(extension):
+            s1 += os.path.getsize(f'{path}/{f}')
+    return s1
 
-print(f'before: {s1/1048576:.2f} Mb\nafter:  {s2/1048576:.2f} Mb')
+s1 = sizeofdata(paths)
+s2 = sizeofdata(f'{paths}/{sfolder}')
 
-
-
-
+print(f'Size of images:\nbefore: {s1/1048576:.2f} Mb\nafter:  {s2/1048576:.2f} Mb')
