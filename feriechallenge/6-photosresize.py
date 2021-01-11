@@ -21,11 +21,13 @@ for f in os.listdir('.'):
         size = []
         for s in im.size:                               
             size.append(int(s//2))            
-        im.thumbnail(size)                              
+        im.thumbnail(size) 
+        # ustawienie dla zdjęć robionych moim aparatem aby nie przekręcały się poziomo gdy zmieniam rozmiar | dla zwykłych wystarczy to co w else                             
         if size[1] < size[0]:                           
             im.transpose(Image.ROTATE_90).save(f'{paths}/{sfolder}/{name}half{fext}')
         else:
             im.save(f'{paths}/{sfolder}/{name}half{fext}')
+        
 
 def sizeofdata(path):
     s1 = 0
