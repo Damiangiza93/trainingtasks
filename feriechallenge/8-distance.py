@@ -11,7 +11,8 @@ import requests
 from math import sqrt, cos, pi
 import geocoder
 
-api_key = "fe6b113cacmsh408e7551c973e91p1ec335jsna41eb97e6e86"
+# give your x-rapidapi-key
+api_key = ""
 
 def localization(address):
     url = "https://trueway-geocoding.p.rapidapi.com/Geocode"
@@ -35,4 +36,3 @@ d_len = sqrt(
             (cos(my_loc['location']['lat'] * pi / 180) * (go_loc['location']['lng'] - my_loc['location']['lng']))**2) * (40075.704/360)
 
 print(f'{goloc} jest {d_len:.2f}km od {myloc}')
-
