@@ -35,7 +35,7 @@ categories = [
 for i in categories:
     if i[0]<bmi<=i[1]:
         print('Your weight is:',i[2])
-        
+
 ''' ćwiczenia '''
 maxtime = float(input('maximum training time in minutes:'))
 ex_list = ['running', 'bike', 'swimming', 'crossfit', 'skating']

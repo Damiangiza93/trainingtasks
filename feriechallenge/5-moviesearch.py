@@ -52,6 +52,3 @@ for movie in movieslist:
             print('Rating: ',films['rating'],'\n')
     except:
         pass
-
-    
-

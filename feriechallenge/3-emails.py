@@ -59,7 +59,7 @@ for i in plist:
         print(f'Some data missin in row {plist.index(i)+2}')
 
     ''' add image'''
-    
+
     image = f'{p[0]}_{p[1]}_image.jpg'
     try:
         with open(image, 'rb') as fp:

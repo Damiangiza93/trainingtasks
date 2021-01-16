@@ -50,4 +50,3 @@ q = response.json()
 quote = random.choice(q)
 print('Quote of the day:\n',f'"{quote["text"]}"')
 print('Author:',quote['author'])
-

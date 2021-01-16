@@ -33,7 +33,7 @@ def checkbyauthor(author):
 def sort(e):
     return e['publicationYear']
 
- 
+
 check = ''
 while check != 'z':
     check = input('Chcesz (w)ypożyczyć książkę, (o)ddać książkę czy (z)akończyć? (w/o/z):')
@@ -67,7 +67,7 @@ while check != 'z':
             print("Rok publikacji = ", row[2])
             print("ID = ", row[3], "\n")
             sleep(0.3)
-        
+
         book_id = [input('Podaj id książki do oddania:')]
         isin = False
         for i in conn.cursor().execute("SELECT title, id from books").fetchall():
@@ -81,7 +81,7 @@ while check != 'z':
             print(f'Książka {btitle} została oddana \n')
         else:
             print('Nie posiadasz książki o podanym id. Spróbuj jeszcze raz')
-            
+
     elif check == 'z':
         print('Dziękujemy za skorzystanie z biblioteki')
     else:

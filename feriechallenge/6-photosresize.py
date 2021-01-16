@@ -27,7 +27,7 @@ for f in os.listdir('.'):
             im.transpose(Image.ROTATE_90).save(f'{paths}/{sfolder}/{name}half{fext}')
         else:
             im.save(f'{paths}/{sfolder}/{name}half{fext}')
-        
+
 
 def sizeofdata(path):
     s1 = 0
